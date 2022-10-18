@@ -6,8 +6,8 @@ class Shop(Storage):
         super().__init__(items, capacity)
 
 
-    def add(self, name, koll) -> None:
+    def add(self, name, amount) -> None:
         if self.get_unique_items_count() >= 5:
             raise BaseException
 
-        super().add( name, koll)
+        super().add(name, amount)

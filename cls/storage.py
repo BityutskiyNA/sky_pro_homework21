@@ -31,10 +31,10 @@ class Storage(ABSStorage):
             del self._items[name]
 
     def get_free_space(self) -> int:
-        z = 0
+        space = 0
         for x in self._items.values():
-            z += x
-        return self._capacity - z
+            space += x
+        return self._capacity - space
 
 
     def get_items(self) -> dict:
